@@ -1,0 +1,25 @@
+{
+  "name": "algebra-for-dummies",
+  "version": "1.0.2",
+  "description": "this is a package for maths utility function",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "MATHS",
+    "mathematics",
+    "algebra"
+  ],
+  "author": "Ahmad Raza",
+  "license": "MIT",
+  "dependencies": {
+    "mathjs": "^10.6.4"
+  },
+  "devDependencies": {
+    "jest": "^28.1.2"
+  },
+  "files": [
+    "test/*test.js"
+  ]
+}
