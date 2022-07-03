@@ -20,7 +20,7 @@ const solution = solveLinearEquation("2x + y = 1","x + y = 1");
 ```
 
 
-## How to use it with the browser
+## How to use it in the browser
 
 ### just paste this line in header of your html file
 
@@ -29,7 +29,7 @@ const solution = solveLinearEquation("2x + y = 1","x + y = 1");
 <script src="https://unpkg.com/algebra-for-you@latest/dist/index.umd.js"></script>
 ```
 
-### Here the full code 
+### Here is the full code 
 
 ```html
 <!DOCTYPE html>
@@ -84,3 +84,6 @@ const solution = solveLinearEquation("2x + y = 1","x + y = 1");
 
 </html>
 ```
+
+## Feel free to raise issues or contribute
+
