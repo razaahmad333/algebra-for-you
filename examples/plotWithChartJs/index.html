@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Algebra using Chart.js</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="../../dist/main.umd.js"></script>
+        <link rel="stylesheet" href="./styles/index.css">
+    </head>
+
+
+    <body>
+        <div class="chart">
+            <canvas id="myChart"></canvas>
+        </div>
+        <script>
+
+
+            const { SystemOfEquation } = AlgebraForYou;
+
+            let eq1 = "2y + 3x + 1 = 0";
+            let eq2 = "x  = -5"
+            let eq3 = "y  = 5"
+            let eq4 = "x + y = -5"
+            let eq5 = "2x  = -5"
+
+            const canvas = document.getElementById('myChart');
+
+            const system = new SystemOfEquation([eq1, eq2, eq3, eq4, eq5]);
+            const chart = new Chart(
+                canvas,
+                system.getChartConfig()
+            );
+
+
+
+
+        </script>
+
+    </body>
+
+</html>

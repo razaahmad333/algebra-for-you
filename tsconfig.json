@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+      "target": "es5",
+      "module": "commonjs",
+      "declaration": true,
+      "outDir": "./dist/src",
+      "baseUrl": "./src",
+      "strict": true,
+      "esModuleInterop": true,
+    },
+    "watchOptions": {
+      "excludeDirectories": [
+        "node_modules",
+        "dist"
+      ],
+    },
+    "include": ["src/**/**/*"],
+    "exclude": ["node_modules", "dist/**", "docs/**","test", "examples/**"]
+}

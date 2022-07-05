@@ -2,7 +2,8 @@
   "name": "algebra-for-you",
   "version": "1.0.0",
   "description": "use utility functions to solve algebra problems from 5th grade to advance level",
-  "main": "dist/index.umd.js",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/razaahmad333/algebra-for-you.git"
@@ -12,7 +13,11 @@
   },
   "scripts": {
     "test": "jest",
-    "build": "webpack"
+    "build:main": "webpack --config webpack.prod.config.js",
+    "build:dev": "webpack watch --config webpack.dev.config.js",
+    "build:tsc": "tsc",
+    "build:tsc:dev": "tsc --watch",
+    "dev": " concurrently \"npm run build:tsc:dev\" \"npm run build:dev\""
   },
   "keywords": [
     "MATHS",
@@ -22,13 +27,17 @@
   "author": "Ahmad Raza",
   "license": "MIT",
   "dependencies": {
+    "lodash": "^4.17.21",
     "mathjs": "^10.6.4"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.182",
     "babel-loader": "^8.2.5",
     "babel-register": "^6.26.0",
+    "concurrently": "^7.2.2",
     "jest": "^28.1.2",
     "json-loader": "^0.5.7",
+    "typescript": "^4.7.4",
     "webpack": "^5.73.0",
     "webpack-cli": "^4.10.0"
   }
