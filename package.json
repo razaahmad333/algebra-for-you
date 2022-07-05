@@ -1,8 +1,8 @@
 {
   "name": "algebra-for-you",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "use utility functions to solve algebra problems from 5th grade to advance level",
-  "main": "dist/index.umd.js",
+  "main": "src/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/razaahmad333/algebra-for-you.git"
@@ -19,7 +19,11 @@
     "mathematics",
     "algebra"
   ],
-  "author": "Ahmad Raza",
+  "author": {
+    "name": "Ahmad Raza",
+    "email": "ahmadrazakhan8992@gmail.com",
+    "url": "https://ahmad-raza.vercel.app/"
+  },
   "license": "MIT",
   "dependencies": {
     "mathjs": "^10.6.4"
