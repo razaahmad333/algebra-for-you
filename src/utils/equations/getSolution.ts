@@ -17,7 +17,11 @@ export const getSolution = (
   let yFactor = a2 * c1 - a1 * c2;
   let constFactor = a1 * b2 - a2 * b1;
 
-  const typeOfSolution = findTypeOfSolution({ xFactor, yFactor, constFactor });
+  const typeOfSolution = findTypeOfSolution(
+    { xFactor, yFactor, constFactor },
+    coefficients1,
+    coefficients2
+  );
 
   if (typeOfSolution === UNIQUE_SOLUTION) {
     const x = xFactor / constFactor;

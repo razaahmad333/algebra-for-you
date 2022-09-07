@@ -18,3 +18,6 @@ __exportStar(require("./findTypeOfSolution"), exports);
 __exportStar(require("./getEquationFromString"), exports);
 __exportStar(require("./getEquationCoefficient"), exports);
 __exportStar(require("./getSolution"), exports);
+__exportStar(require("./isEquationValid"), exports);
+__exportStar(require("./getInEquationFormat"), exports);
+__exportStar(require("./getSolutionOfPair"), exports);

@@ -19,3 +19,4 @@ __exportStar(require("./linearEquations/forChart"), exports);
 __exportStar(require("./basic"), exports);
 __exportStar(require("./linearEquations/getEquationCoefficient"), exports);
 __exportStar(require("./linearEquations"), exports);
+__exportStar(require("./linearEquationInOneVariable"), exports);

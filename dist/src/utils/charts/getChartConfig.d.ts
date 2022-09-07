@@ -6,8 +6,8 @@ export interface IOptions {
     end: number;
 }
 interface IGetChartConfigProps {
-    equations: IEquation[];
+    validEquations: IEquation[];
     options?: IOptions;
 }
-export declare const getChartConfig: ({ equations, options, }: IGetChartConfigProps) => IChartConfig;
+export declare const getChartConfig: ({ validEquations, options, }: IGetChartConfigProps) => IChartConfig;
 export {};

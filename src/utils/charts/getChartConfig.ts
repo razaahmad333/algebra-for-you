@@ -2,7 +2,7 @@ import _ from "lodash";
 import { IChartConfig } from "../../interfaces/chart";
 import { IEquation } from "../../interfaces/equation";
 import { getEquationCoefficient } from "../equations";
-import { isEquationValid } from "../equations/isEquationValid";
+import { isEquationValidForTwoVariable } from "../equations/isEquationValid";
 import { generateDataPoints } from "./generateDataPoints";
 import { generateDataForConfig } from "./generateDataForConfig";
 
@@ -19,27 +19,30 @@ const defaultOptions = {
 };
 
 interface IGetChartConfigProps {
-  equations: IEquation[];
+  validEquations: IEquation[];
   options?: IOptions;
 }
 
 export const getChartConfig = ({
-  equations,
+  validEquations,
   options = defaultOptions,
 }: IGetChartConfigProps): IChartConfig => {
-  const validEquations = _.dropWhile(equations, (equation) => {
-    return !isEquationValid(equation);
-  });
-
   const dataPoints = validEquations.map((equation) => {
-    const coefficients = getEquationCoefficient(equation);
+    const coefficients = getEquationCoefficient(equation.expression);
     const { xs, ys } = generateDataPoints({ coefficients, options });
     return { xs, ys };
   });
 
   return {
-    type: "line",
+    type: "scatter",
     data: generateDataForConfig({ dataPoints, validEquations }),
-    options: {},
+    options: {
+      scales: {
+        x: {
+          // type: "linear",
+          position: "bottom",
+        },
+      },
+    },
   };
 };

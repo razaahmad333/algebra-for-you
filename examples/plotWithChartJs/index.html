@@ -22,20 +22,33 @@
             const { SystemOfEquation } = AlgebraForYou;
 
             let eq1 = "2y + 3x + 1 = 0";
-            let eq2 = "x  = -5"
-            let eq3 = "y  = 5"
+            let eq2 = "x + 2y = 0"
+            let eq3 = "y + 2x  = 0"
             let eq4 = "x + y = -5"
             let eq5 = "2x  = -5"
 
             const canvas = document.getElementById('myChart');
 
-            const system = new SystemOfEquation([eq1, eq2, eq3, eq4, eq5]);
+            const system = new SystemOfEquation([eq1, eq2]);
             const chart = new Chart(
                 canvas,
                 system.getChartConfig()
             );
 
 
+            const findX = " -2 + 6 = 3 -2 - cat ";
+
+            const solution = AlgebraForYou.solveEquationInOneVariable(findX, {
+                variableName: "cat"
+            });
+
+            const equationsWithThreeVariable = {
+                first: "x+y+z=1",
+                second: "x+2y+z=2",
+                third: "x-y+z=-1"
+            }
+
+            console.log(solution)
 
 
         </script>

@@ -2,9 +2,10 @@ export interface IChartData {
     labels: Array<string | number>;
     datasets: Array<any>;
 }
+export declare type IChart = "line" | "scatter";
 export declare type IChartOptions = any;
 export interface IChartConfig {
-    type: "line";
+    type: IChart;
     data: IChartData;
     options: IChartOptions;
 }
