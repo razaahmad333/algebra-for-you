@@ -1,3 +1,2 @@
-export declare const isEquationValid: (equation: any) => boolean;
-export declare const isEquationValidForTwoVariable: (equation: any, variableNames?: string[]) => boolean;
-export declare const isEquationValidForOneVariable: (equation: any, variableName?: string) => boolean;
+import { IEquation } from "interfaces/equation";
+export declare const isEquationValid: (equation: IEquation) => boolean;

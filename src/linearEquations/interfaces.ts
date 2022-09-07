@@ -29,9 +29,3 @@ export interface IEquationSystemFactor {
   yFactor: number;
   constFactor: number;
 }
-
-export interface IPairSolution {
-  firstEquationId: string;
-  secondEquationId: string;
-  solution: ISolution;
-}

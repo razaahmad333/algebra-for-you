@@ -3,11 +3,10 @@ export interface IChartData {
   datasets: Array<any>;
 }
 
-export type IChart = "line" | "scatter";
 export type IChartOptions = any;
 
 export interface IChartConfig {
-  type: IChart;
+  type: "line";
   data: IChartData;
   options: IChartOptions;
 }

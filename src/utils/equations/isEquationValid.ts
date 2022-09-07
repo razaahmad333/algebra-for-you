@@ -1,7 +1,6 @@
 import { IEquation } from "interfaces/equation";
-import { getEquationOnOneSide } from "./getEquationFromString";
 
-export const isEquationValid = (equation: any): boolean => {
+export const isEquationValid = (equation: IEquation): boolean => {
   if (equation === undefined) {
     return false;
   }
@@ -14,44 +13,10 @@ export const isEquationValid = (equation: any): boolean => {
     return false;
   }
 
-  const ifConstant =
-    Number(getEquationOnOneSide(equation)) === 0 ||
-    Number(getEquationOnOneSide(equation));
+  equation = equation.toLocaleLowerCase();
 
-  if (ifConstant) {
+  if (!equation.includes("x") && !equation.includes("y")) {
     return false;
   }
-
-  return true;
-};
-
-export const isEquationValidForTwoVariable = (
-  equation: any,
-  variableNames: string[] = ["x", "y"]
-): boolean => {
-  if (!isEquationValid(equation)) {
-    return false;
-  }
-  const [x1, x2] = variableNames;
-
-  if (!variableNames.includes(x1) || !variableNames.includes(x2)) {
-    return false;
-  }
-
-  return true;
-};
-
-export const isEquationValidForOneVariable = (
-  equation: any,
-  variableName: string = "x"
-): boolean => {
-  if (!isEquationValid(equation)) {
-    return false;
-  }
-
-  if (!equation.includes(variableName)) {
-    return false;
-  }
-
   return true;
 };
